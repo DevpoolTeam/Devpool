@@ -1,0 +1,90 @@
+body{
+	margin: 0 auto;
+	max-width: 800px;
+	font-family:"Verdana";
+}
+
+.wrapper{
+	border: 2px solid black;
+	border-radius: 100px;
+	height: 100vh;
+	max-width: 800px;
+}
+
+.wrapper table{
+	margin: 0 auto;
+	padding: 250px 0 100px 0;
+}
+
+input{
+	text-align:center;
+}
+
+.login_input_css{
+	border: 2px solid black;
+	height: 50px;
+	border-radius:20px;
+}
+
+.logo{
+	position: relative;
+	top: 50%;
+	left: 350px;
+}
+
+.login_input_buttons_css{
+	margin-top: 10px;
+	border-radius: 10px;
+	height: 30px;
+	background-color:white;
+	border: 2px solid black;	
+}
+
+.logout_link{
+	position: relative;
+	top:-71px;
+	left:610px;
+	width: 1px;
+}
+
+.logout_link a{
+	text-decoration: none;
+	border: 2px solid black;
+	display: inline block;
+	padding: 10px;
+	border-radius: 20px;
+	color: #999;
+}
+
+.mainmenu1 a, .mainmenu2 a, .mainmenu3 a, .mainmenu4 a{
+	text-decoration: none;
+	border: 2px solid black;
+	display: inline block;
+	padding: 10px;
+	border-radius: 20px;
+	color: #999;	
+}
+
+.mainmenu1{
+	margin-top: 100px;
+	padding: 20px;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.mainmenu2{
+	padding: 20px;	
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.mainmenu3{
+	padding: 20px;
+	text-align: center;	
+	margin-bottom: 50px;
+}
+
+.mainmenu4{
+	padding: 20px;
+	text-align: center;	
+}
