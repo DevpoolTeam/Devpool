@@ -29,7 +29,8 @@ if (!isset($_SESSION['kor_ime'])){
 			<p align="center"> Prekopiraj link iznad i podijeli ga gdje želiš... </p>
 			<br/>
 			<p align="center"> ... ili podijeli putem e-maila: </p>
-			<div style="position:relative; left: 280px; top:50px;"><a style="text-decoration: none;border: 2px solid #999;display: inline block;padding: 10px;border-radius: 20px;color: #b20125;"href="mailto:subject=Anketa&body=Ovdje ide link ankete. Unaprijed hvala na ispunjavanju ankete!">Klikni za dijeljenje mailom</a></div>
+			<div style="position:relative; left: 280px; top:50px;"><a style="text-decoration: none;border: 2px solid #999;display: inline block;padding: 10px;border-radius: 20px;color: #b20125;"
+			href="mailto:?Subject=Anketa&Body=Ovdje%20ide%20link%20ankete.%20Unaprijed%20hvala%20na%20ispunjavanju%20ankete%21">Klikni za dijeljenje mailom</a></div>
 		</div>
 		
 	</div>
