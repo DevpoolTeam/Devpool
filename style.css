@@ -2,10 +2,11 @@ body{
 	margin: 0 auto;
 	max-width: 800px;
 	font-family:"Verdana";
+	color: #b20125;
 }
 
 .wrapper{
-	border: 2px solid black;
+	border: 2px solid #999;
 	border-radius: 100px;
 	height: 100vh;
 	max-width: 800px;
@@ -21,7 +22,7 @@ input{
 }
 
 .login_input_css{
-	border: 2px solid black;
+	border: 2px solid #999;
 	height: 50px;
 	border-radius:20px;
 }
@@ -37,7 +38,8 @@ input{
 	border-radius: 10px;
 	height: 30px;
 	background-color:white;
-	border: 2px solid black;	
+	border: 2px solid #999;	
+	color: #b20125;
 }
 
 .logout_link{
@@ -47,26 +49,42 @@ input{
 	width: 1px;
 }
 
-.logout_link a{
+.back_link{
+	position: relative;
+	top:75px;
+	left:100px;
+	width: 1px;
+}
+
+.back_link a{
 	text-decoration: none;
-	border: 2px solid black;
+	border: 2px solid #999;
 	display: inline block;
 	padding: 10px;
 	border-radius: 20px;
-	color: #999;
+	color: #b20125;
+}
+
+.logout_link a{
+	text-decoration: none;
+	border: 2px solid #999;
+	display: inline block;
+	padding: 10px;
+	border-radius: 20px;
+	color: #b20125;
 }
 
 .mainmenu1 a, .mainmenu2 a, .mainmenu3 a, .mainmenu4 a{
 	text-decoration: none;
-	border: 2px solid black;
+	border: 2px solid #999;
 	display: inline block;
 	padding: 10px;
 	border-radius: 20px;
-	color: #999;	
+	color: #b20125;	
 }
 
 .mainmenu1{
-	margin-top: 100px;
+	margin-top: 50px;
 	padding: 20px;
 	text-align: center;
 	margin-bottom: 50px;
@@ -88,3 +106,7 @@ input{
 	padding: 20px;
 	text-align: center;	
 }
+ input::placeholder, textarea::placeholder{
+	color:#b20125;
+ }
+ 
