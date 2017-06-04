@@ -23,7 +23,17 @@ if(isset($_POST['submit'])){
 	$trecepitanje_odgovor = $_POST["trecepitanje_odgovor"];
 	
 	$error = true;
+	
+	$dbc = mysqli_connect('localhost', 'root', '', 'survey_db') or die('Error connecting to MySQL server.');
+	$query = "INSERT INTO questions(ime_ankete, prvo_pitanje, prvo_pitanje_prvi_odgovor, prvo_pitanje_drugi_odgovor, prvo_pitanje_treci_odgovor,
+	drugo_pitanje, drugo_pitanje_prvi_odgovor, drugo_pitanje_drugi_odgovor, drugo_pitanje_treci_odgovor, trece_pitanje, trece_pitanje_odgovor)
+	VALUES ('$imeankete', '$prvopitanje', '$prvopitanje_prviodgovor', '$prvopitanje_drugiodgovor', '$prvopitanje_treciodgovor', '$drugopitanje', 
+		'$drugopitanje_prviodgovor', '$drugopitanje_drugiodgovor', '$drugopitanje_treciodgovor', '$trecepitanje', '$trecepitanje_odgovor')";
+	$result = mysqli_query($dbc, $query) or die('Error querying databese.');
+	mysqli_close($dbc);
 }
+
+
 
 
 ?>
