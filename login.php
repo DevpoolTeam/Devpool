@@ -22,10 +22,11 @@ if(isset($_POST['submit'])){
 <head>
 	<link rel="stylesheet" type="text/css" href="style.css"/>
 	<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title> Devpool App </title>
 </head>
 <body>
-	<div class="wrapper">
+	<div class="wrapper" style="padding-top:50px;">
 		<img class="logo" src="5863ef2b7d90850fc3ce296a.png" width="100px" height="100px"/>
 		<form action="" method="post">
 			<table style="margin-top: -50px;">

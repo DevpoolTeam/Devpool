@@ -24,17 +24,14 @@ if(isset($_POST['submit'])){
 	
 	$error = true;
 	
-	$dbc = mysqli_connect('localhost', 'root', '', 'survey_db') or die('Error connecting to MySQL server.');
-	$query = "INSERT INTO questions(ime_ankete, prvo_pitanje, prvo_pitanje_prvi_odgovor, prvo_pitanje_drugi_odgovor, prvo_pitanje_treci_odgovor,
+	$dbc = mysqli_connect('localhost', 'root', '1234', 'survey_db') or die('Error connecting to MySQL server.');
+	$query = "INSERT INTO questions_db(ime_ankete, prvo_pitanje, prvo_pitanje_prvi_odgovor, prvo_pitanje_drugi_odgovor, prvo_pitanje_treci_odgovor,
 	drugo_pitanje, drugo_pitanje_prvi_odgovor, drugo_pitanje_drugi_odgovor, drugo_pitanje_treci_odgovor, trece_pitanje, trece_pitanje_odgovor)
 	VALUES ('$imeankete', '$prvopitanje', '$prvopitanje_prviodgovor', '$prvopitanje_drugiodgovor', '$prvopitanje_treciodgovor', '$drugopitanje', 
 		'$drugopitanje_prviodgovor', '$drugopitanje_drugiodgovor', '$drugopitanje_treciodgovor', '$trecepitanje', '$trecepitanje_odgovor')";
 	$result = mysqli_query($dbc, $query) or die('Error querying databese.');
 	mysqli_close($dbc);
 }
-
-
-
 
 ?>
 
@@ -44,6 +41,7 @@ if(isset($_POST['submit'])){
 	<link rel="stylesheet" type="text/css" href="style.css"/>
 	<link rel="icon" href="favicon.ico" type="image/x-icon"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title> Devpool App </title>
 </head>
 <body>
