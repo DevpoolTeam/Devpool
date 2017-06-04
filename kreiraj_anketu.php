@@ -23,7 +23,17 @@ if(isset($_POST['submit'])){
 	$trecepitanje_odgovor = $_POST["trecepitanje_odgovor"];
 	
 	$error = true;
+	
+	$dbc = mysqli_connect('localhost', 'root', '', 'survey_db') or die('Error connecting to MySQL server.');
+	$query = "INSERT INTO questions(ime_ankete, prvo_pitanje, prvo_pitanje_prvi_odgovor, prvo_pitanje_drugi_odgovor, prvo_pitanje_treci_odgovor,
+	drugo_pitanje, drugo_pitanje_prvi_odgovor, drugo_pitanje_drugi_odgovor, drugo_pitanje_treci_odgovor, trece_pitanje, trece_pitanje_odgovor)
+	VALUES ('$imeankete', '$prvopitanje', '$prvopitanje_prviodgovor', '$prvopitanje_drugiodgovor', '$prvopitanje_treciodgovor', '$drugopitanje', 
+		'$drugopitanje_prviodgovor', '$drugopitanje_drugiodgovor', '$drugopitanje_treciodgovor', '$trecepitanje', '$trecepitanje_odgovor')";
+	$result = mysqli_query($dbc, $query) or die('Error querying databese.');
+	mysqli_close($dbc);
 }
+
+
 
 
 ?>
@@ -38,6 +48,7 @@ if(isset($_POST['submit'])){
 </head>
 <body>
 	<div class="wrapper">
+		<div class="back_link"><p><a href="index.php"> Povratak </a></p></div>
 		<img class="logo" src="5863ef2b7d90850fc3ce296a.png" width="100px" height="100px"/>
 		<div class="logout_link"><p><a href="logout.php"> Odjava </a></p></div>
 		<div style="margin-top: -250px;">
@@ -45,7 +56,7 @@ if(isset($_POST['submit'])){
 				<table>
 					<tr>
 						<td>Ime ankete: </td>
-						<td><input type="text" placeholder="Unesi ime ankete..." name="imeankete"/></td>
+						<td><input type="text" placeholder="Unesi ime ankete..." name="imeankete" style="border: 0.2px solid #b20125;"/></td>
 					</tr>
 					<tr>
 						<td colspan="2"><hr/></td>
@@ -55,58 +66,58 @@ if(isset($_POST['submit'])){
 					</tr>
 					<tr>
 						<td>Pitanje #1 </td>
-						<td><input type="text" placeholder="Tekst prvog pitanja..." name="prvopitanje"/> (pitanje s jednostrukim odgovorom)</td>
+						<td><input type="text" placeholder="Tekst prvog pitanja..." name="prvopitanje" style="border: 0.2px solid #b20125;"/> (pitanje s jednostrukim odgovorom)</td>
 					</tr>
 					<tr>
 						<td><br/></td>
 					</tr>
 					<tr>
 						<td>Odgovor #1 <input type="radio" name="" checked /> </td>
-						<td><input type="text" placeholder="Prvi odgovor..." name="prvopitanje_prviodgovor"/></td>
+						<td><input type="text" placeholder="Prvi odgovor..." name="prvopitanje_prviodgovor" style="border: 0.2px solid #b20125;"/></td>
 					</tr>
 					<tr>
 						<td>Odgovor #2 <input type="radio" name="" /> </td>
-						<td><input type="text" placeholder="Drugi odgovor..." name="prvopitanje_drugiodgovor"/></td>
+						<td><input type="text" placeholder="Drugi odgovor..." name="prvopitanje_drugiodgovor" style="border: 0.2px solid #b20125;"/></td>
 					</tr>
 					<tr>
 						<td>Odgovor #3 <input type="radio" name="" /> </td>
-						<td><input type="text" placeholder="Treći odgovor..." name="prvopitanje_treciodgovor"/></td>
+						<td><input type="text" placeholder="Treći odgovor..." name="prvopitanje_treciodgovor" style="border: 0.2px solid #b20125;"/></td>
 					</tr>
 					<tr>
 						<td colspan="2"><hr/></td>
 					</tr>
 					<tr>
 						<td>Pitanje #2 </td>
-						<td><input type="text" placeholder="Tekst drugog pitanja..." name="drugopitanje"/> (pitanje s višestrukim odgovorom)</td>
+						<td><input type="text" placeholder="Tekst drugog pitanja..." name="drugopitanje" style="border: 0.2px solid #b20125;"/> (pitanje s višestrukim odgovorom)</td>
 					</tr>
 					<tr>
 						<td><br/></td>
 					</tr>
 					<tr>
 						<td>Odgovor #1 <input type="checkbox" name="" checked /> </td>
-						<td><input type="text" placeholder="Prvi odgovor..." name="drugopitanje_prviodgovor"/></td>
+						<td><input type="text" placeholder="Prvi odgovor..." name="drugopitanje_prviodgovor" style="border: 0.2px solid #b20125;"/></td>
 					</tr>
 					<tr>
 						<td>Odgovor #2 <input type="checkbox" name="" checked /> </td>
-						<td><input type="text" placeholder="Drugi odgovor..." name="drugopitanje_drugiodgovor"/></td>
+						<td><input type="text" placeholder="Drugi odgovor..." name="drugopitanje_drugiodgovor" style="border: 0.2px solid #b20125;"/></td>
 					</tr>
 					<tr>
 						<td>Odgovor #3 <input type="checkbox" name="" /> </td>
-						<td><input type="text" placeholder="Treći odgovor..." name="drugopitanje_treciodgovor"/></td>
+						<td><input type="text" placeholder="Treći odgovor..." name="drugopitanje_treciodgovor" style="border: 0.2px solid #b20125;"/></td>
 					</tr>
 					<tr>
 						<td colspan="2"><hr/></td>
 					</tr>
 					<tr>
 						<td>Pitanje #3 </td>
-						<td><input type="text" placeholder="Tekst prvog pitanja..." name="trecepitanje"/> (pitanje s opširnim odgovorom)</td>
+						<td><input type="text" placeholder="Tekst prvog pitanja..." name="trecepitanje" style="border: 0.2px solid #b20125;"/> (pitanje s opširnim odgovorom)</td>
 					</tr>
 					<tr>
 						<td><br/></td>
 					</tr>
 					<tr>
 						<td>Odgovor #1 </td>
-						<td><textarea placeholder="Unesi odgovor" name="trecepitanje_odgovor"></textarea></td>
+						<td><textarea placeholder="Unesi odgovor" name="trecepitanje_odgovor" style="border: 0.2px solid #b20125;"></textarea></td>
 					</tr>
 					<tr>
 						<td><br/></td>

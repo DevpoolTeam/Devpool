@@ -28,7 +28,7 @@ if(isset($_POST['submit'])){
 	<div class="wrapper">
 		<img class="logo" src="5863ef2b7d90850fc3ce296a.png" width="100px" height="100px"/>
 		<form action="" method="post">
-			<table>
+			<table style="margin-top: -50px;">
 				<tr>	
 					<td>
 						<?php
@@ -39,16 +39,16 @@ if(isset($_POST['submit'])){
 					</td>
 				</tr>
 				<tr>
-					<td align="center"><input class="login_input_css" type="text" name="kor_ime" id="kor_ime" placeholder="Unesi korisnicko ime..." align="center"/></td>
+					<td align="center"><input class="login_input_css" type="text" name="kor_ime" id="kor_ime" placeholder="Unesi korisnicko ime..." align="center" style="border: 2px solid #999";/></td>
 				</tr>
 				<tr>
-					<td align="center"><input class="login_input_css" type="password" name="lozinka" id="lozinka" placeholder="Unesi lozinku..."/></td>
+					<td align="center"><input class="login_input_css" type="password" name="lozinka" id="lozinka" placeholder="Unesi lozinku..." style="border: 2px solid #999;"/></td>
 				</tr>
 				<tr>
-					<td align="center"><input class="login_input_buttons_css" type="submit" name="submit" id="submit" value="Potvrdi"/></td>
+					<td align="center"><input class="login_input_buttons_css" type="submit" name="submit" id="submit" value="Potvrdi" style="border: 2px solid #999;"/></td>
 				</tr>
 				<tr>
-					<td align="center"><input class="login_input_buttons_css" type="reset" name="reset" id="reset" value="Očisti polja"/></td>
+					<td align="center"><input class="login_input_buttons_css" type="reset" name="reset" id="reset" value="Očisti polja" style="border: 2px solid #999;" color="red"/></td>
 				</tr>
 			</table>
 		</form>
