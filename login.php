@@ -29,7 +29,7 @@ if(isset($_POST['submit'])){
 	<div class="wrapper" style="padding-top:50px;">
 		<img class="logo" src="5863ef2b7d90850fc3ce296a.png" width="100px" height="100px"/>
 		<form action="" method="post">
-			<table style="margin-top: -50px;">
+			<table style="margin-top: 50px;">
 				<tr>	
 					<td>
 						<?php
