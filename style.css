@@ -29,7 +29,6 @@ input{
 
 .logo{
 	position: relative;
-	top: 50%;
 	left: 350px;
 }
 
@@ -84,7 +83,7 @@ input{
 }
 
 .mainmenu1{
-	margin-top: 50px;
+	margin-top: 200px;
 	padding: 20px;
 	text-align: center;
 	margin-bottom: 50px;

@@ -23,7 +23,7 @@ if (!isset($_SESSION['kor_ime'])){
 		<div class="mainmenu">
 			<div class="mainmenu1"><a href="kreiraj_anketu.php"> Kreiraj novu anketu </a></div>
 			<div class="mainmenu2"><a href="anketa_admin.php"> Administracija ankete </a></div>
-			<div class="mainmenu3"><a href="#"> Pregled odgovora </a></div>
+			<div class="mainmenu3"><a href="analiza_ankete.php"> Pregled odgovora </a></div>
 			<div class="mainmenu4"><a href="podijeli_anketu.php"> Podijeli anketu </a></div>
 		</div>
 		
