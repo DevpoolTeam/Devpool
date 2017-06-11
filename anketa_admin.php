@@ -18,11 +18,16 @@ if (!isset($_SESSION['kor_ime'])){
 </head>
 <body>
 
-	<div class="wrapper" style="padding-top:50px;">
+	<div class="wrapper">
 		<div class="back_link"><p><a href="index.php"> Povratak </a></p></div>
 		<img class="logo" src="5863ef2b7d90850fc3ce296a.png" width="100px" height="100px"/>
 		<div class="logout_link"><p><a href="logout.php"> Odjava </a></p></div>
-		<img src="in_construction.jpg" style="position:relative; left:200px; top: 100px;"/>
+		<div class="mainmenu">
+			<div class="mainmenu1" style="margin-top:100px;"><a href="#"> Obriši cijelu anketu </a></div>
+			<div class="mainmenu2"><a href="#"> Obriši zabilježene odgovore iz baze</a></div>
+			<div class="mainmenu3"><a href="#"> Export odgovora u CSV </a></div>
+			<div class="mainmenu4"><a href="#"> Dodaj/ukloni pitanje </a></div>
+		</div>
 		
 	</div>
 </body>
